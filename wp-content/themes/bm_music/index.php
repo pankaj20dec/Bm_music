@@ -75,7 +75,7 @@ get_header(); ?>
 					<div class="col-nine centered">
 						<h1 class="title">Clients</h1>
 						<div class="release-content">
-							<div class="slider1">
+							<div class="slider1 desktop-clients">
 								<?php $taxonomy = 'writer';
 								$slidesHtml = "";
 								$term_list = get_terms($taxonomy);
@@ -97,6 +97,34 @@ get_header(); ?>
 									}
 								}
 								if(count($term_list)%2 != 0 && $i > 0)
+								{
+									$slidesHtml .= '</div></div>';
+								}
+								echo $slidesHtml;
+								?>
+							</div>
+							<div class="slider3 mobile-clients">
+								<?php $taxonomy = 'writer';
+								$slidesHtml = "";
+								$term_list = get_terms($taxonomy);
+								$i=0;
+								foreach($term_list as $term)
+								{
+									$i++;
+									if($i == 1)
+									{
+										$slidesHtml .= '<div class="slide"><div class="slide-content">';
+									}
+									
+									$slidesHtml .= '<h3><a href="'.esc_attr(get_term_link($term, $taxonomy)).'">'.$term->name.'</a></h3>';
+									
+									if($i == 6)
+									{
+										$slidesHtml .= '</div></div>';
+										$i = 0;
+									}
+								}
+								if(count($term_list)%6 != 0 && $i > 0)
 								{
 									$slidesHtml .= '</div></div>';
 								}
@@ -128,6 +156,14 @@ get_header(); ?>
 	<section id="contact" class="cheight">
 		<div class="contact-content section">
 			<h1 class="title">Contact us</h1>
+			<div class="mobile-social-icons">
+				<ul>
+					<li><a href="#" class="facebook">facebook</a></li>
+					<li><a href="#" class="twitter">twitter</a></li>
+					<li><a href="#" class="instagram">instagram</a></li>
+					<li><a href="#" class="youtube">youtube</a></li>
+				</ul>	
+			</div>
 		</div>	
 	</section>
 <?php get_footer(); ?>

@@ -10,6 +10,7 @@
 					<li><a href="#" class="youtube">youtube</a></li>
 				</ul>	
 			</div>
+			
 			<div class="copyright">
 				<p>© 2016 Brightman Music LLC. All rights reserved.</p>
 			</div>

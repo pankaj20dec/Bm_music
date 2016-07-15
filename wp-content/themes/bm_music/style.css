@@ -327,6 +327,7 @@ optgroup {
 	background-size: cover;
 	background-position: center center;
 	position: relative;
+	background-repeat: no-repeat !important;
 	z-index: 99;
 }
 .flex-container{
@@ -340,6 +341,7 @@ optgroup {
 	font-size: 50px;
 	letter-spacing: 38px;
 	text-transform: uppercase;
+	text-indent: 38px;
 }
 .scroll-down{
 	position: absolute;
@@ -447,7 +449,7 @@ header#header nav{
 	 display: none;
  }
  body.home #header ul li:first-child {
-    /*display: none;*/
+    display: none;
 }
 .category-content {
     text-align: center;
@@ -525,10 +527,12 @@ a[data-readmore-toggle="rmjs-1"]{
     float: left;
 }
 .tweet {
-	font-size: 16px;
-	color: #666;
-	margin: 0 0 20px 0;
-	line-height: 2;
+    color: #666;
+    font-size: 16px;
+    height: 135px;
+    line-height: 2;
+    margin: 0 0 20px;
+    overflow: hidden;
 }
 .user a{
 	text-decoration: none;
@@ -540,6 +544,7 @@ a[data-readmore-toggle="rmjs-1"]{
 	bottom: 0;
 	z-index: 0;
 	text-transform: capitalize;
+	right: 0;
 }
 .user span[data-scribe="element:screen_name"]:before{
 	content: "\f099";
@@ -547,14 +552,19 @@ a[data-readmore-toggle="rmjs-1"]{
     position: absolute;
 	font-size: 22px;
     left: -30px;
-    top: -6px;
+    top: -3px;
 	color: #a1a1a1;
 }
 .slider2 .slide{
 	height: 150px;
 }
-
-
+#contact .title{
+	font-family: inherit;
+	color: #666666;
+}
+.release-content .bx-wrapper:nth-child(2) {
+    display: none;
+}
  /***********  Footer  ***********/
  #footer{
 	 text-align: center;

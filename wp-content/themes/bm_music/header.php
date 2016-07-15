@@ -47,4 +47,13 @@
 			<?php wp_nav_menu( array('theme_location' => 'primary') );?>
 		</nav>
 	</header>
+	<div class="mobile-menu">
+		<a href="javascript:void(0);">
+			<span class="hamberger">&nbsp;</span> <span class="menu-text">Menu</span>
+		</a>
+	</div>
+	<div id="menu-container">
+		<a href="javascript:void(0);" class="close">&times;</a>
+		<?php wp_nav_menu( array('theme_location' => 'primary') );?>
+	</div>
 	

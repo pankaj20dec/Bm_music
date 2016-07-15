@@ -102,6 +102,7 @@ function bm_music_scripts() {
 
 	wp_enqueue_style( 'bm_music-bxslider', get_template_directory_uri() . '/css/bxslider.css', array( 'bm_music-style' ), '20160415' );
 	wp_enqueue_style( 'bm_music-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'bm_music-style' ), '20160420' );
+	wp_enqueue_style( 'bm_music-media', get_template_directory_uri() . '/css/media.css', array( 'bm_music-style' ), '20160421' );
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'bm_music-ie', get_template_directory_uri() . '/css/ie.css', array( 'bm_music-style' ), '20160412' );
 	
