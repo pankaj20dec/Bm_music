@@ -327,6 +327,7 @@ optgroup {
 	background-size: cover;
 	background-position: center center;
 	position: relative;
+	z-index: 99;
 }
 .flex-container{
 	display: flex;
@@ -356,16 +357,17 @@ optgroup {
 .scroll-down a p{
 	margin-bottom: 0;
 }
-/*header#header{
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 99;
-}*/
-/*header#header nav{
+header#header{
+	background-color: #fff;
+}
+header#header nav{
 	padding-top: 40px;
 }
-*/
+.scroll-to-fixed-fixed  nav{
+	padding-top: 0 !important;
+	transition: all 0.4s ease;
+}
+
 #header nav ul{
 	text-align: center;
 	margin: 0;
@@ -445,7 +447,7 @@ optgroup {
 	 display: none;
  }
  body.home #header ul li:first-child {
-    display: none;
+    /*display: none;*/
 }
 .category-content {
     text-align: center;
@@ -513,6 +515,7 @@ a[data-readmore-toggle="rmjs-1"]{
 	padding-top: 75px;
 	color: #666666;
 	font-size: 14px;
+	
 }
 /******  Twitter  feeds  ************/
 .interact,.user span[data-scribe="element:name"] {
@@ -535,6 +538,17 @@ a[data-readmore-toggle="rmjs-1"]{
 	color: #000;
 	position: absolute;
 	bottom: 0;
+	z-index: 0;
+	text-transform: capitalize;
+}
+.user span[data-scribe="element:screen_name"]:before{
+	content: "\f099";
+    font-family: "fontawesome";
+    position: absolute;
+	font-size: 22px;
+    left: -30px;
+    top: -6px;
+	color: #a1a1a1;
 }
 .slider2 .slide{
 	height: 150px;

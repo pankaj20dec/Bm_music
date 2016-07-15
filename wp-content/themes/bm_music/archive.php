@@ -99,78 +99,14 @@ get_header(); ?>
 		</div>	
 	</div>		
 </div>
-<section id="news" class="">
+<section id="news" class="wheight">
 		<div class="flex-container section"> 
 			<div class="inset">
 				<div class="row clearfix">
 					<div class="">
-						<h1 class="title">news</h1>
+						<h1 class="title">News</h1>
 						<div class="news-content">
-							<div class="slider1">
-							  <div class="slide">
-								<div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-									</div>
-									T @SocialHandle
-								</div>
-							  </div>
-							  <div class="slide">
-								 <div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>	
-									</div>
-									T @SocialHandle		
-								 </div>	
-							  </div>
-							   <div class="slide">
-								<div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>		
-									</div>
-									T @SocialHandle	
-								 </div>	
-							  </div>
-							   <div class="slide">
-								 <div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>		
-									</div>
-									T @SocialHandle		
-								 </div>	
-							  </div>
-							   <div class="slide">
-								 <div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>	
-									</div>
-									T @SocialHandle	
-								 </div>	
-							  </div>
-							   <div class="slide">
-								<div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>	
-									</div>
-										T @SocialHandle	
-								 </div>		
-							  </div>
-							   <div class="slide">
-								 <div class="slide-content">
-									<div class="news-feeds">
-										<img src="<?php echo get_template_directory_uri();?>/images/sailors-guide.jpg" alt="sailors-guide"/>
-										<p>Lorem ipsum dolor Link adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>		
-									</div>
-									T @SocialHandle		
-								 </div>	
-							  </div>
-							</div>
+							 <div id="feeds"></div>
 						</div>
 						<div class="border-bottom"></div>
 					</div>

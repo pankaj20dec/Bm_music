@@ -101,6 +101,7 @@ function bm_music_scripts() {
 	wp_enqueue_style( 'bm_music-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bm_music-bxslider', get_template_directory_uri() . '/css/bxslider.css', array( 'bm_music-style' ), '20160415' );
+	wp_enqueue_style( 'bm_music-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'bm_music-style' ), '20160420' );
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'bm_music-ie', get_template_directory_uri() . '/css/ie.css', array( 'bm_music-style' ), '20160412' );
 	
@@ -141,3 +142,10 @@ function bm_music_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bm_music_scripts' );
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}

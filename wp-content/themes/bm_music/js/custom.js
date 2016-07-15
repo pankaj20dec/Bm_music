@@ -7,19 +7,20 @@ jQuery(document).ready(function(){
 		maxSlides: 3,
 		slideMargin: 70
 	  });
-	 jQuery(window).scroll(function(){
-		 if(jQuery(window).scrollTop() > 100){
-			 jQuery('.scroll-top').fadeIn(); 
-		 }else{
-			  jQuery('.scroll-top').fadeOut();
-		 }
-	 });
+	 
 	 jQuery('.scroll-top').click(function(){
 		jQuery('html,body').animate({
 			scrollTop: 0
 		},600)
 	 });
-	 
+	 jQuery('.scroll-down a').click(function(e){
+		e.preventDefault();
+		var href = jQuery(this).attr("href");
+		var $href = jQuery(href).offset().top;
+		jQuery('html,body').animate({
+			scrollTop: $href
+		},600) 
+	 });
 	jQuery('#header nav ul li a').click(function(e){
 		e.preventDefault();
 		var href = jQuery(this).attr("href");
@@ -35,6 +36,13 @@ jQuery(document).ready(function(){
 	});
 	
 });
+jQuery(window).scroll(function(){
+	 if(jQuery(window).scrollTop() > 100){
+		 jQuery('.scroll-top').fadeIn(); 
+	 }else{
+		  jQuery('.scroll-top').fadeOut();
+	 }
+ });
 jQuery(window).load(function(){
 	size();
 	 jQuery('.slider2').bxSlider({

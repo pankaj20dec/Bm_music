@@ -110,7 +110,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-	<section id="news" class="mheight">
+	<section id="news" class="wheight">
 		<div class="flex-container section"> 
 			<div class="inset">
 				<div class="row clearfix">
@@ -127,7 +127,7 @@ get_header(); ?>
 	</section>
 	<section id="contact" class="cheight">
 		<div class="contact-content section">
-			<h1 class="title">Contact</h1>
+			<h1 class="title">Contact us</h1>
 		</div>	
 	</section>
 <?php get_footer(); ?>
