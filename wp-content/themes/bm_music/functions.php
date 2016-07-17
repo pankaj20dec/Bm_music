@@ -101,6 +101,7 @@ function bm_music_scripts() {
 	wp_enqueue_style( 'bm_music-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bm_music-bxslider', get_template_directory_uri() . '/css/bxslider.css', array( 'bm_music-style' ), '20160415' );
+	wp_enqueue_style( 'bm_music-custom-scrollbar', get_template_directory_uri() . '/css/custom-scrollbar.css', array( 'bm_music-style' ), '20160422' );
 	wp_enqueue_style( 'bm_music-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'bm_music-style' ), '20160420' );
 	wp_enqueue_style( 'bm_music-media', get_template_directory_uri() . '/css/media.css', array( 'bm_music-style' ), '20160421' );
 	// Load the Internet Explorer specific stylesheet.
@@ -125,6 +126,7 @@ function bm_music_scripts() {
 	wp_enqueue_script( 'bm_music-bxslider', get_template_directory_uri() . '/js/bxslider.js', array(), '20160415', true );
 	wp_enqueue_script( 'bm_music-readmore', get_template_directory_uri() . '/js/readmore.js', array(), '20160417', true );
 	wp_enqueue_script( 'bm_music-twitter-fetcher', get_template_directory_uri() . '/js/twitter-fetcher.js', array(), '20160418', true );
+	wp_enqueue_script( 'bm_music-custom-scrollbar', get_template_directory_uri() . '/js/custom-scrollbar.min.js', array(), '20160419', true );
 	wp_enqueue_script( 'bm_music-jquery-scrolltofixed', get_template_directory_uri() . '/js/jquery-scrolltofixed.js', array(), '20160416', true );
 	wp_enqueue_script( 'bm_music-custom', get_template_directory_uri() . '/js/custom.js', array(), '20160414', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -142,11 +144,3 @@ function bm_music_scripts() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'bm_music_scripts' );
-
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class($classes, $item){
-     if( in_array('current-menu-item', $classes) ){
-             $classes[] = 'active ';
-     }
-     return $classes;
-}

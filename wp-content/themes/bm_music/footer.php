@@ -10,7 +10,14 @@
 					<li><a href="#" class="youtube">youtube</a></li>
 				</ul>	
 			</div>
-			
+			<div class="mobile-social-icons">
+				<ul>
+					<li><a href="#" class="facebook">facebook</a></li>
+					<li><a href="#" class="twitter">twitter</a></li>
+					<li><a href="#" class="instagram">instagram</a></li>
+					<li><a href="#" class="youtube">youtube</a></li>
+				</ul>	
+			</div>
 			<div class="copyright">
 				<p>© 2016 Brightman Music LLC. All rights reserved.</p>
 			</div>

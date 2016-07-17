@@ -27,8 +27,8 @@
 
   var readmore = 'readmore',
       defaults = {
-        speed: 100,
-        collapsedHeight: 270,
+        speed: 80,
+        collapsedHeight: 330,
         heightMargin: 16,
         moreLink: '<a href="#">Read More</a>',
         embedCSS: true,

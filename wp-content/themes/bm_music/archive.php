@@ -24,7 +24,7 @@ get_header(); ?>
 			<div class="row clearfix">
 				<div class="col col-eight centered">
 					<?php 
-						$term_id = get_queried_object_id();
+					   $term_id = get_queried_object_id();
 					   $term = $wp_query->queried_object;
 					   $term_name = $term->name;
 					   $image = get_field('image', $term);
@@ -36,6 +36,7 @@ get_header(); ?>
 					   $youtubeUrl = get_field('youtube_url', $term);
 					   $downloadPdf = get_field('download_pdf', $term);
 					   $pdfUrl = $downloadPdf['url'];
+					   $firstName = explode(" ", $term_name);
 					?>
 					<div class="writer-name">
 						<h3><?php echo $term_name; ?></h3>
@@ -44,7 +45,7 @@ get_header(); ?>
 						<img src="<?php echo $imageUrl; ?>" alt="<?php echo $term_name; ?>"/>
 					</div>
 					<div class="website-link">
-						<a href="<?php echo $website; ?>"><?php echo $term_name; ?>'s Website</a>
+						<a href="<?php echo $website; ?>"><?php echo $firstName[0]; ?>'s Website</a>
 					</div>
 					<div class="social-icons">
 						<ul>
@@ -54,9 +55,13 @@ get_header(); ?>
 							<li><a href="<?php echo $youtubeUrl; ?>" class="youtube" target="_blank">youtube</a></li>
 						</ul>	
 					</div>
-					
-					<?php $content = the_archive_description( '<div class="taxonomy-description">', '</div>' );?>
-					
+				</div>
+			</div>
+			<div class="inset taxonomy-desc">
+				<div class="row clearfix">
+					<div class="col col-eight centered">
+						<?php $content = the_archive_description( '<div class="taxonomy-description">', '<div class="gradient-effect"></div></div>' );?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -64,41 +69,43 @@ get_header(); ?>
 			<h1 class="title">Discography</h1>
 			<div class="inset">
 				<div class="row clearfix">
-					<div class="col col-nine">
-						<?php
-						// Start the Loop.
-						while ( have_posts() ) : the_post();
-						?>	
-						<div class="discography-content">
-							<div class="row clearfix">
-								<div class="col col-two">
-									<div class="discography-thumbs">
-										<?php echo get_the_post_thumbnail();?>
-									</div>
-								</div>
-								<div class="col col-ten">
-									<div class="description">
-										<div class="discography-desc">
-											<h5><?php the_title(); ?></h5>
-											<p>Sturgill Simpson</p>
-											<p>2015</p>
+					<div class="mCustomScrollbar custom-scrollbar" data-mcs-theme="dark">
+						<div class="col col-nine">
+								<?php
+									// Start the Loop.
+									while ( have_posts() ) : the_post();
+									?>	
+									<div class="discography-content">
+										<div class="row clearfix">
+											<div class="col col-two">
+												<div class="discography-thumbs">
+													<?php echo get_the_post_thumbnail();?>
+												</div>
+											</div>
+											<div class="col col-ten">
+												<div class="description">
+													<div class="discography-desc">
+														<h5><?php the_title(); ?></h5>
+														<p>Sturgill Simpson</p>
+														<p>2015</p>
+													</div>
+												</div>	
+											</div>
 										</div>
 									</div>	
-								</div>
-							</div>
-						</div>	
-						<?php 
-						endwhile;
-					endif;
-					?>
+									<?php 
+									endwhile;
+								endif;
+								?>
+						</div>
+					</div>	
 					<div class="pdf">
 						<a href="<?php echo $pdfUrl; ?>" target="_blank">Download Full Discography</a>
-					</div>
-				</div>		
+					</div>							
+				</div>	
 			</div>	
-		</div>	
-	</div>		
-</div>
+		</div>		
+	</div>
 <section id="news" class="wheight">
 		<div class="flex-container section"> 
 			<div class="inset">
