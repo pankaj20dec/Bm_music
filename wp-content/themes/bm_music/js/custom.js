@@ -81,7 +81,12 @@ jQuery(document).ready(function(){
 	jQuery('.taxonomy-description').readmore({
 		moreLink: '<a href="#">Expand</a>',
 	});
-	
+	jQuery('.contact-us').click(function(){
+		jQuery('.contact-popup').fadeIn(600);
+	});
+	jQuery('.pop-close').click(function(){
+		jQuery('.contact-popup').fadeOut(600);
+	});
 	/************ Mobile menu  ***************/
 	jQuery('.mobile-menu a').click(function(){
 		jQuery('#menu-container').fadeIn(600);

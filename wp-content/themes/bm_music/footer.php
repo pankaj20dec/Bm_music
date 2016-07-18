@@ -22,6 +22,23 @@
 				<p>© 2016 Brightman Music LLC. All rights reserved.</p>
 			</div>
 		</footer>
+		<div class="contact-popup">
+			<a href="javascript:void(0);" class="pop-close">Close</a>
+			<div class="contact-form clearfix">
+				<?php echo do_shortcode('[contact-form-7 id="32" title="Contact form 1"]');?>
+			</div>
+		</div>
 <?php wp_footer(); ?>
+<script>
+	(function($) {
+	$(document).ajaxComplete(function() {
+	setTimeout(
+	function()
+	{
+	$('.wpcf7-mail-sent-ok').slideUp('slow');
+	}, 2000);
+	});
+	})(jQuery);
+</script>
 </body>
 </html>

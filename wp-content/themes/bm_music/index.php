@@ -155,7 +155,7 @@ get_header(); ?>
 	</section>
 	<section id="contact" class="cheight">
 		<div class="contact-content section">
-			<h1 class="title">Contact us</h1>
+			<h1 class="title"><a href="javascript:void(0);" class="contact-us">Contact us</a></h1>
 			<div class="mobile-social-icons">
 				<ul>
 					<li><a href="#" class="facebook">facebook</a></li>
